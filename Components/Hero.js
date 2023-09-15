@@ -33,7 +33,79 @@ export default function Hero() {
 
             <div className='hero-two'>
 
-                sdfszfsdfds
+                <div className='row1 card-row'>
+
+                    <div className='card'>
+
+                        <div className='r1-c1 cards'>
+                            
+                        </div>
+
+                        <h1> Academic Opportunities </h1>
+                        <p>Uncover scholarships tailored to your academic pursuits.</p>
+
+                    </div>
+
+                    <div className='card'>
+
+                        <div className='r1-c2 cards'>
+                            
+                        </div>
+
+                        <h1> Inclusive Scholarships </h1>
+                        <p>Find scholarships designed for students from all backgrounds.</p>
+
+                    </div>
+
+                    <div className='card'>
+
+                        <div className='r1-c3 cards'>
+                            
+                        </div>
+
+                        <h1> Specialized Fields </h1>
+                        <p>Discover scholarships for niche subjects and industries.</p>
+
+                    </div>
+
+                </div>
+
+                <div className='row2 card-row'>
+
+                <div className='card'>
+
+                    <div className='r2-c1 cards'>
+                        
+                    </div>
+
+                    <h1>Global Access</h1>
+                    <p>Connect with scholarships offered around the world.</p>
+
+                    </div>
+
+                    <div className='card'>
+
+                    <div className='r2-c2 cards'>
+                        
+                    </div>
+
+                    <h1> Creative Scholarships </h1>
+                    <p>Unleash your creativity and find scholarships to support your passion.</p>
+
+                    </div>
+
+                    <div className='card'>
+
+                    <div className='r2-c3 cards'>
+                        
+                    </div>
+
+                    <h1> Outdoor Enthusiasts </h1>
+                    <p>Embark on adventures with scholarships for outdoor lovers.</p>
+
+                    </div>
+
+                </div>
 
             </div>
 
