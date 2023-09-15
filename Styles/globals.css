@@ -41,6 +41,8 @@
     align-items: center;
     justify-content: space-between;
     transition: all 0.1s ease-in-out;
+    position: sticky;
+    top: 0;
 }
 
 .navbar:hover
@@ -128,6 +130,7 @@
     align-items: center;
     justify-content: space-evenly; */
     padding: 0vw;
+    overflow-y: hidden;
 }
 
 .round {
@@ -135,19 +138,31 @@
     height: 100vw;
     background-color: #ff99c8;
     overflow: visible;
-    opacity: 0.8;
+
     z-index: 1;
     position: absolute;
     border-radius: 50%;
-    padding: 4vw;
-  }
+    padding: 2vw 4vw;
+    display: flex;
+    align-items: top;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-one
+{
+    width: 90vw;
+    height: 50vw;
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+}
 
 .hero-text h1.heading
 {
     width: 45vw;
     height: max-content;
     font-size: 6.5vw;
-    z-index: 10;
 }
 
 .hero-text h1.heading::after, .hero-text h1.heading::before
@@ -155,56 +170,76 @@
     content: "'";
 }
 
-
-/* @media only screen and (max-width :720px)
+.hero-text p
 {
-    body
-    {
-        background-image: url(../images/bg_mobile.jpg);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: top left;
-        }
-        .hero-main
-        {
-                        margin-top: -3rem !important;*/
-                       /* min-height: calc(100% + 3rem);*/
-            /*                min-height: auto!important;*/
-            /*            min-height: unset!important;*/
-            /*        min-height: fit-content;*/
-            /*            min-height: initial*/
-            /*min-height: 100vh;*/
-            /*            display: flex;*/
-            /*            justify-content: center;*/
-            /*            align-items: center;*/
-            /*            transform: translateY(-10%); */
-            /*                    transition: all ease 0s ;*/
-            /*            box-shadow: none;*/
-            /*            filter: blur(.5em);*/
-            /*            animation: bg-animation 1s linear infinite alternate forwards;
-            }*/
-            /*    @keyframes bg-animation
-            {
-                from
-                {
-                    /*                    opacity: 1;*/
-                    /*                        transform: scaleY(1);
-                    }
-                    /*to
-                    {
-                        /*                            opacity:.8;
-                        transform:scaleX(9);}
-                        }*/
-                        /*            height:auto;*/
-                        /*            width:fit-content;*/
-                        /*            max-width:unset;*/
-                        /*            padding:4vw;*/
-                        /*            font-size:calc((var(--baseFontSize)*6)/10)!important;*/
-                        /*            color:#fff;*/
-                        /*                        border-radius: var(--borderRadiusLarge);*/
-                        /*                        position: relative;
-                        }
-                        } */
+    font-size: 1.7vw;
+    margin: 3vw 0 0 0;
+    width: 45vw;
+    height: fit-content;
+    padding: 0.5vw;
+    transition: all 0.2s ease-in-out;
+}
+
+.hero-text p:hover
+{
+    background-color: #A9DEF9;
+    /* color: #ff99c8; */
+    border-radius: 1vw;
+}
+
+.cta
+{
+    width: 30vw;
+    height: 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.1vw;
+}
+
+.cta-btns
+{
+    width: 20vw;
+    height: 3vw;
+    background-color: #fff;
+    border-radius: 2vw;
+    margin: 1vw;
+    transition: all 0.2s ease-in-out;
+}
+
+.cta-btns:hover
+{
+    font-size: 1.2vw;
+    border-radius: 1vw;
+    background-color: #000;
+    color: #fff;
+}
+
+.hero-img
+{
+    width: 25vw;
+    height: 40vw;
+    background: url(/hero.jpg) no-repeat center;
+    background-size: cover;
+    border-radius: 1vw;
+}
+
+/* Div one ends */
+
+/* Div 2 starts */
+
+.hero-two
+{
+    width: 90vw;
+    height: 50vw;
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    background-color: #FCF6BD;
+}
+
+/* Div 2 Ends */
+
 
 ::-webkit-scrollbar
 {

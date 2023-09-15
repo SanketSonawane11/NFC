@@ -1,9 +1,13 @@
 'use client'
 import Hero from '@/Components/Hero'
 import Navbar from '@/Components/Navbar'
-import React from 'react'
+import React, { useState } from 'react'
+import sData from '../../sData'
 
 function Home() {
+
+    console.log(sData)
+
   return (
     <div className='body'>
     
@@ -11,6 +15,8 @@ function Home() {
         <Navbar />
         <Hero />
       </div>
+
+      
     
     </div>
   )
