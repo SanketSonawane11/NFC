@@ -1,8 +1,13 @@
+import Navbar from '@/Components/Navbar'
 import React from 'react'
 
 function Scholarships() {
   return (
-    <div>Scholarships</div>
+    <div className='body'>
+      
+      <Navbar />
+
+    </div>
   )
 }
 

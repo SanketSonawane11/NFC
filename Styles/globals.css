@@ -6,16 +6,34 @@
 
 *
 {
-    background-color: #fff;
     font-family: 'Nunito', 'Poppins', 'Inter', 'Space Grotesk';
+}
+
+.body
+{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Navbar Starts */
 
+.hs
+{
+    width: 100vw;
+    background: #A9DEF9;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .navbar
 {
     width: 100vw;
-    height: 6vw;
+    height: 5vw;
+    background: transparent;
     padding: 0.2vw 2vw;
     border-bottom-left-radius: 1vw;
     border-bottom-right-radius: 1vw;
@@ -33,6 +51,13 @@
 .logo
 {
     font-size: 3vw;
+    transition: all 0.2s ease-in-out;
+}
+
+.logo:hover::after
+{
+    content: " tagline ithe yeil";
+    font-size: 1.5vw;
 }
 
 .menu
@@ -43,9 +68,10 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    text-align: center;
 }
 
-.scholarships, .login, .resources, .signup
+.scholarships, .login, .resources
 {
     transition: all 0.2s ease-in-out;
 }
@@ -55,3 +81,132 @@
     font-size: 1.2vw;
 }
 
+.moptions
+{
+    width: fit-content;
+    height: 2vw;
+    margin: 0 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-btn
+{
+    width: 9vw;
+    height: 2.3vw;
+    padding: 0.1vw;
+    color: #fff;
+    background-color: #000;
+    font-size: 1.1vw;
+    border-radius: 1vw;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-btn:hover
+{
+    font-size: 1.4vw;
+    background-color: #fff;
+    border: 1px solid black;
+    color: #000;
+    border-radius: 0.6vw;
+}
+
+/* Navbar Ends */
+
+/* Hero Starts */
+
+.hero-main
+{
+    background-color: #A9DEF9;
+    width: 100vw;
+    height: 89.6vh;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-evenly; */
+    padding: 0vw;
+}
+
+.round {
+    width: 100vw;
+    height: 100vw;
+    background-color: #ff99c8;
+    overflow: visible;
+    opacity: 0.8;
+    z-index: 1;
+    position: absolute;
+    border-radius: 50%;
+    padding: 4vw;
+  }
+
+.hero-text h1.heading
+{
+    width: 45vw;
+    height: max-content;
+    font-size: 6.5vw;
+    z-index: 10;
+}
+
+.hero-text h1.heading::after, .hero-text h1.heading::before
+{
+    content: "'";
+}
+
+
+/* @media only screen and (max-width :720px)
+{
+    body
+    {
+        background-image: url(../images/bg_mobile.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: top left;
+        }
+        .hero-main
+        {
+                        margin-top: -3rem !important;*/
+                       /* min-height: calc(100% + 3rem);*/
+            /*                min-height: auto!important;*/
+            /*            min-height: unset!important;*/
+            /*        min-height: fit-content;*/
+            /*            min-height: initial*/
+            /*min-height: 100vh;*/
+            /*            display: flex;*/
+            /*            justify-content: center;*/
+            /*            align-items: center;*/
+            /*            transform: translateY(-10%); */
+            /*                    transition: all ease 0s ;*/
+            /*            box-shadow: none;*/
+            /*            filter: blur(.5em);*/
+            /*            animation: bg-animation 1s linear infinite alternate forwards;
+            }*/
+            /*    @keyframes bg-animation
+            {
+                from
+                {
+                    /*                    opacity: 1;*/
+                    /*                        transform: scaleY(1);
+                    }
+                    /*to
+                    {
+                        /*                            opacity:.8;
+                        transform:scaleX(9);}
+                        }*/
+                        /*            height:auto;*/
+                        /*            width:fit-content;*/
+                        /*            max-width:unset;*/
+                        /*            padding:4vw;*/
+                        /*            font-size:calc((var(--baseFontSize)*6)/10)!important;*/
+                        /*            color:#fff;*/
+                        /*                        border-radius: var(--borderRadiusLarge);*/
+                        /*                        position: relative;
+                        }
+                        } */
+
+::-webkit-scrollbar
+{
+    width: 0;
+}

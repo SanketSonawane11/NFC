@@ -16,20 +16,20 @@ function Navbar() {
 
         <div className='menu'>
 
-            <div className='scholarships'>
+            <div className='scholarships moptions'>
                 <Link href='/Scholarships'>Find Scholarships</Link>
             </div>
 
-            <div className='resources'>
+            <div className='resources moptions'>
                 <Link href='/resources'>Resources</Link>
             </div>
 
-            <div className='login'>
+            <div className='login moptions'>
                 <Link href='/Login'>Login</Link>
             </div>
 
-            <div className='signup'>
-                <Link href='/Signup'>Sign Up</Link>
+            <div className='signup moptions'>
+                    <Link href='/Signup' className='signup-btn'>Sign Up</Link>
             </div>
 
         </div>
