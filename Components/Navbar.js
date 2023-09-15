@@ -1,4 +1,6 @@
 'use client'
+import Scholarships from '@/src/app/Scholarships/page';
+import SignUp from '@/src/app/SignUp/page';
 import Link from 'next/link'
 import React, { useState } from 'react'
 
@@ -29,7 +31,7 @@ function Navbar() {
             </div>
 
             <div className='signup moptions'>
-                    <Link href='/Signup' className='signup-btn'>Sign Up</Link>
+                    <Link href='/SignUp' className='signup-btn'>Sign Up</Link>
             </div>
 
         </div>

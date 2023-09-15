@@ -44,7 +44,7 @@ function Footer() {
 
         <div className='cpoyrights'>
 
-            &copy; Scholarship finder
+            &copy; Scholarship finder 2023
 
         </div>
 
