@@ -23,7 +23,7 @@ function Scholarships() {
         if (location && item.location !== location) {
           return false; 
         }
-        if (degree && item.degree !== degree) {
+        if (degree && item.degrees !== degree) {
           return false;
         }
         return true;
@@ -142,8 +142,27 @@ function Scholarships() {
 
               <p className='text-[10vw] w-[45vw] h-[40vw] font-bold'>Results : </p>
 
-              <textarea className='textresult' value={filteredContent.map((item) => item.text).join('\n')} rows={10} />
-              {/* <textarea className='textresult' value={data.map((item) => item.text).join('\n')} rows={10} /> */}
+              <table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Funds</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {filteredContent.map((item, index) => (
+      <tr key={index}>
+        <td>{item.title}</td>
+        <td>{item.funds}</td>
+        <td>{item.date}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+
+              {/* <textarea className='textresult' value={data.map((item) => `${item.title}, Funds: ${item.funds}, Date: ${item.date}`).join('\n')} rows={10} /> */}
 
             </div>
 
