@@ -2,7 +2,9 @@
 import Navbar from '@/Components/Navbar'
 import React, { useState } from 'react'
 import { auth } from '..'
+// import { useAuthState } from 'react-firebase-hooks/auth'
 import { signInWithProp, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+// import { useCollection } from 'react-firebase-hooks/firestore'
 // import { useRouter } from 'next/router';
 
 
@@ -11,6 +13,8 @@ function Login() {
     // const [user, setUser] = useState('');    
     // const [pass, setPass] = useState('');
     const googleAuth = new GoogleAuthProvider();
+    // const [loggedIn, setLoggedIn] = useState(false);
+    const [loginText, setLoginText] = useState('Login');
     // const router = useRouter();
   
     const login = async (e) => {
@@ -21,10 +25,12 @@ function Login() {
         const user = result.user;
         
         console.log(`Successfully signed in as ${user.displayName}`);
+        setLoginText('Logged in successfully');
 
       } catch (error) {
         console.error("Error signing in with Google:", error.message);
       }
+
     };
 
 
@@ -39,7 +45,7 @@ function Login() {
 
             <div className='login-card'>
 
-                <h1> Login </h1>
+                <h1> {loginText} </h1>
 
                 <div className='form-login'>
 

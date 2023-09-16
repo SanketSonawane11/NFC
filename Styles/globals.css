@@ -571,7 +571,14 @@ input.searchtext
     margin: 5vw 4vw;
     background-color: #909bff;
     border-radius: 1.2vw;
+    overflow-y: scroll;
     text-align: center;
+}
+
+.textresult
+{
+  width: 60vw;
+  border-radius: 1.5vw;
 }
 
  /* Search Page */
@@ -801,7 +808,97 @@ input.searchtext
   border-radius: 0.5vw;
   padding: 0.4vw;
 }
- /**/
+ /*Login ends*/
+
+ /*Resources*/
+
+ header{
+  height: 10vh;
+  border: 1px solid black;
+}
+body{
+  background-color: #A9DEF9;
+}
+#container{
+  width: 90vw;
+  height: auto;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+  /* margin: 100px; */
+}
+.card{
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  width: 18vw;
+  height: 50vh;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+}
+h1{
+  margin: 20px;
+  color: white;
+}
+.one, .two, .three{
+  height: 100%;
+  width: 100%;
+}
+
+.one
+{
+  background: url(/essay.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.two
+{
+  background: url(/tips.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.three
+{
+  background: url(/fin.jpg) no-repeat center;
+  background-size: cover;
+}
+@media (max-width:450px){
+  header{
+    height: 8vh;
+  }
+  #container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 69%;
+    margin: 60px;
+  }
+  .card{
+    width: 100%;
+    height: 37vh;
+    margin-bottom: 15px;
+  }
+}
+@media (min-width:451px) and (max-width:950px){
+  #container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .card{
+    width: 100%;
+    height: 30vh;
+    margin-bottom: 20px;
+    border-radius: 40px;
+  }
+  img {
+height: 157%;
+width: 105%;
+}
+}
+
+ /*Resources*/
 
  /* FOOTER STARTS */
 

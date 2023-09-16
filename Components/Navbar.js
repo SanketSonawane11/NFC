@@ -1,13 +1,26 @@
 'use client'
 import Scholarships from '@/src/app/Scholarships/page';
-import SignUp from '@/src/app/SignUp/page';
 import Link from 'next/link'
 import React, { useState } from 'react'
 
 
 function Navbar() {
 
-    const [logo, setLogo] = useState("Logo");
+    const [logo, setLogo] = useState("Funded Futures");
+    // const login = async (e) => {
+    //     e.preventDefault();
+    
+    //     try {
+    //       const result = await signInWithPopup(auth, googleAuth);
+    //       const user = result.user;
+          
+    //       console.log(`Successfully signed in as ${user.displayName}`);
+  
+    //     } catch (error) {
+    //       console.error("Error signing in with Google:", error.message);
+    //     }
+        
+    //   };
 
   return (
     <div className='navbar'>
@@ -23,15 +36,13 @@ function Navbar() {
             </div>
 
             <div className='resources moptions'>
-                <Link href='/resources'>Resources</Link>
+                <Link href='/Resources'>Resources</Link>
             </div>
 
             <div className='login moptions'>
-                <Link href='/Login'>Login</Link>
-            </div>
-
-            <div className='signup moptions'>
-                    <Link href='/SignUp' className='signup-btn'>Sign Up</Link>
+                {/* <form> */}
+                <Link href='/Login'> Login / Sign Up </Link>
+                {/* </form> */}
             </div>
 
         </div>

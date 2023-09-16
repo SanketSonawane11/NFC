@@ -1,26 +1,55 @@
 'use client'
 import Footer from '@/Components/Footer'
 import Navbar from '@/Components/Navbar'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+// import { useAuthState } from 'react-firebase-hooks/auth'
+// import { useCollection } from 'react-firebase-hooks/firestore'
+import data from '../../../data.json';
+
 
 
 function Scholarships() {
 
-  const [region, setRegion] = useState('');
-  const [course, setCourse] = useState('');
-  const [results, setResults] = useState('No results');
+  const [location, setLocation] = useState('');
+  const [degree, setDegree] = useState('');
+  const [filteredContent, setFilteredContent] = useState([]);
 
-  const changeRegion = (region) =>
-  {
-    setRegion(region.target.value);
-    console.log(region.target.value);
-  }
+  useEffect(() => {
 
-  const changeCourse = (course) =>
-  {
-    setCourse(course.target.value);
-    console.log(course.target.value);
-  }
+    async function fetchData() {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      const filteredData = data.filter((item) => {
+        if (location && item.location !== location) {
+          return false; 
+        }
+        if (degree && item.degree !== degree) {
+          return false;
+        }
+        return true;
+      });
+
+      setFilteredContent(filteredData);
+    }
+
+    // Call the fetchData function to load and filter the data
+    fetchData();
+  }, [location, degree]); // Run this effect whenever location or degree changes
+
+  const changeLocation = (event) => {
+    setLocation(event.target.value);
+  };
+
+  const changeDegree = (event) => {
+    setDegree(event.target.value);
+  };
+
+  
+  console.log('Location:', location);
+  console.log('Degree:', degree);
+  console.log('Filtered Content:', filteredContent);
+
+
 
   return (
 
@@ -47,7 +76,7 @@ function Scholarships() {
 
               <div className='final-selection'>
 
-                Results for: {region} . {course}
+                Results for: {location} . {degree}
 
                </div> 
 
@@ -62,8 +91,8 @@ function Scholarships() {
                     <select
                       className="region-select"
                       name="region"
-                      value={region}
-                      onChange={changeRegion}>
+                      value={location}
+                      onChange={changeLocation}>
 
                       <option value="india">India</option>
                       <option value="united-states">United States</option>
@@ -84,8 +113,8 @@ function Scholarships() {
                     <select
                       className="course-select"
                       name="course"
-                      value={course}
-                      onChange={changeCourse}>
+                      value={degree}
+                      onChange={changeDegree}>
 
                       <option value="Bachelor">Bachelor's</option>
                       <option value="Masters">Master's</option>
@@ -111,9 +140,10 @@ function Scholarships() {
             
             <div className='text-area'>
 
-              <p className='text-[10vw] w-[45vw] font-bold'>Results : </p>
+              <p className='text-[10vw] w-[45vw] h-[40vw] font-bold'>Results : </p>
 
-              {results}
+              <textarea className='textresult' value={filteredContent.map((item) => item.text).join('\n')} rows={10} />
+              {/* <textarea className='textresult' value={data.map((item) => item.text).join('\n')} rows={10} /> */}
 
             </div>
 
