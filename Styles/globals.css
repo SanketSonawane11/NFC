@@ -764,16 +764,43 @@ input.searchtext
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .login-card h1
 {
-    font-size: 1.8vw;
+    font-size: 2vw;
     margin: 0 0 1vw 0;
 }
 
+.loginpg-btn
+{
+  width: 5vw;
+  height: 2vw;
+  background-color: #000;
+  color: #fff;
+  border-radius: 1vw;
+}
 
+.form-login
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  font-size: 1.2vw;
+  font-weight: 600;
+}
 
+.cred
+{
+  font-size: 1.2vw;
+  font-weight: 600;
+  margin: 0.8vw;
+  border-radius: 0.5vw;
+  padding: 0.4vw;
+}
  /**/
 
  /* FOOTER STARTS */
