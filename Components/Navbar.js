@@ -13,7 +13,7 @@ function Navbar() {
     <div className='navbar'>
         
         <div className='logo'>
-            {logo}
+            <Link href='/'>{logo}</Link>
         </div>
 
         <div className='menu'>

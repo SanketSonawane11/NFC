@@ -8,6 +8,7 @@ function Scholarships() {
 
   const [region, setRegion] = useState('');
   const [course, setCourse] = useState('');
+  const [results, setResults] = useState('No results');
 
   const changeRegion = (region) =>
   {
@@ -29,7 +30,7 @@ function Scholarships() {
             <Navbar />
 
 
-            <div className="searchbar">
+            {/* <div className="searchbar">
               <div className='search-all'>
 
                 <form>
@@ -38,13 +39,15 @@ function Scholarships() {
                 </form>
 
               </div>
-            </div>
+            </div> */}
 
             <aside className='filters'>
 
+              <h1> Filters: </h1>
+
               <div className='final-selection'>
 
-                {region} . {course}
+                Results for: {region} . {course}
 
                </div> 
 
@@ -102,9 +105,23 @@ function Scholarships() {
 
           </div>
 
-          <header>Handpicked Scholarships </header>
+          
 
-              <div id="container">
+          <div className='results-area'>
+            
+            <div className='text-area'>
+
+              <p className='text-[10vw] w-[45vw] font-bold'>Results : </p>
+
+              {results}
+
+            </div>
+
+          </div>
+
+          {/* <header>Handpicked Scholarships </header>
+
+              <div id="container-search">
                 <div id="c1">
                   <div id="diverse">
                     <h2>Diverse Categories</h2>
@@ -121,7 +138,7 @@ function Scholarships() {
                 </div>
                 <div id="c2">
                 </div>
-              </div>
+              </div> */}
 
               <Footer />
 
